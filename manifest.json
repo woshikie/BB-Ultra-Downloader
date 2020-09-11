@@ -1,0 +1,21 @@
+{
+    "name": "NTU BB Ultra Recorded Lecture Downloader",
+    "version": "1.0",
+    "description": "Lecture Downloader for NTU BlackBoard Ultra",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches": ["https://*.bbcollab.com/*"],
+        "js": ["content.js"]
+    }],
+    "browser_action": {},
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "downloads",
+        "https://*.bbcollab.com/*"
+    ],
+    "manifest_version": 2
+}
